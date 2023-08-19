@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 //import './App.css';
 import Incio from './pages/Incio';
-
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
+axios.defaults.baseURL = 'http://localhost:3001/';
+//rente
 
 function App() {
   

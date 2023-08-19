@@ -9,11 +9,11 @@ export default function CardBlue({ value_avg, value_sell }) {
       <div className="dos-component">
       <div className="compra">
       <a>compra</a>
-      <h2 className="project-title">{value_avg}</h2>
+      <h2 className="project-title">${value_avg}</h2>
       </div>
       <div className="venta">
       <a>venta</a>
-      <h2 className="project-title">{value_sell}</h2>
+      <h2 className="project-title">${value_sell}</h2>
       </div>
       </div>
     </div>
