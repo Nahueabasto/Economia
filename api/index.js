@@ -1,15 +1,10 @@
-const express = require("express");
-const { conn } = require('./src/db.js');
+
 const server = require('./src/app.js');
+const { conn } = require('./src/db.js');
 
-const app = express();
-const port = process.env.PORT || 3001;
-
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-});
-
-// Sincronizar los modelos con la base de datos
+// Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
-  console.log('Database synced');
+  server.listen(3001, () => {
+    console.log('%s listening at 3001'); // eslint-disable-line no-console
+  });
 });
