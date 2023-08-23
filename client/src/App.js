@@ -18,7 +18,7 @@
 // export default App;
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Incio from './pages/Incio';
+import Incio from './pages/Inicio';
 import axios from 'axios';
 
 function App() {

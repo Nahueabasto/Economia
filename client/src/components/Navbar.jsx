@@ -1,8 +1,8 @@
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-// //import "./Navbar.css";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-// export default function Navbar() {
+export default function Navbar() {
 
 //     const [click, setClick] = useState(false);
 //      const handleClick = () => setClick(!click);
@@ -19,28 +19,28 @@
 //   window.addEventListener("scroll", changeColor);
 
 
-//     return(
-//         <div className={color ? "header header-bg" : "header"}>
-//         <div className="logo-h1">
+    return(
+        <div className= "header header-bg">
+        <div className="logo-h1">
           
-//                  <h1 className="text-nav">Polleria Olivia</h1>
-//                  </div>  
-//                <ul className={click ? "nav-menu active" : "nav-menu"}>
-//                <li>
-//                  <Link to="/">Inicio</Link>
-//                </li>
-//                <li>
-//                  <Link to="/products">Productos</Link>
-//                </li>
-//                <li>
-//                  <Link to="/elaborados">Elaborados</Link>
-//                </li>
-//                <li>
-//                  <Link to="/pastas">Pastas</Link>
-//                </li>
-//                </ul>
+                 <h1 className="text-nav">Noticias financieras</h1>
+                 </div>  
+               <ul className= "nav-menu active">
+               <li>
+                 <Link to="/"></Link>
+               </li>
+               <li>
+                 <Link to="/products"></Link>
+               </li>
+               <li>
+                 <Link to="/elaborados"></Link>
+               </li>
+               <li>
+                 <Link to="/pastas"></Link>
+               </li>
+               </ul>
         
-//              </div>
-//            );
-//          }
+             </div>
+           );
+         }
          
