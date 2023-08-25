@@ -16,8 +16,8 @@ export default function Blue() {
     <div className="blue">
       {dolarblue.blue && (
         <CardBlue
-          value_avg={dolarblue.blue.value_avg}
-          value_sell={dolarblue.blue.value_sell}
+        value_buy={dolarblue.blue.value_buy}
+        value_sell={dolarblue.blue.value_sell}
         />
       )}
     </div>
