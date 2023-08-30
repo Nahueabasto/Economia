@@ -19,6 +19,7 @@
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Incio from './pages/Inicio';
+import MercadoBlue from './pages/MercadoBlue';
 import axios from 'axios';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Incio} /> 
+        <Route exact path="/MercadoBlue" component={MercadoBlue} /> 
       </Switch>
     </BrowserRouter>
   );

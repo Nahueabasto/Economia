@@ -8,12 +8,17 @@
 }
 
 body {
-  background-color: #d6d4d4;
+  background-color: #222121;
 }
 
-h1 {
+h1,
+h3,
+p,
+a {
   color: white;
   text-decoration: none;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 ul {
