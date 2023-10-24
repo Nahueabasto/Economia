@@ -8,8 +8,15 @@ router.get("/dolar", async (req, res) => {
     const exchangeRates = await getExchangeRates();
     const officialExchangeRate = exchangeRates.official;
     const blueExchangeRate = exchangeRates.blue;
+    const officialEuroExchangeRate = exchangeRates.official_euro;
+    const blueEuroExchangeRate = exchangeRates.blue_euro;
 
-    res.json({ official: officialExchangeRate, blue: blueExchangeRate });
+    res.json({
+      official: officialExchangeRate,
+      blue: blueExchangeRate,
+      official_euro: officialEuroExchangeRate,
+      blue_euro: blueEuroExchangeRate
+    });
   } catch (err) {
     res.status(500).json({ error: 'Error fetching exchange rates' });
   }

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import CardOficial from "./CardOficial";
+import Card from "../Blue/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { getDolar } from "../../Redux/Actions";
 import "./Oficial.css";
@@ -12,13 +12,28 @@ export default function Oficial() {
     dispatch(getDolar());
   }, [dispatch]);
 
+const currencies = [
+    { title: "Dólar Oficial", data: dolar.official },
+    { title: "Dólar Blue", data: dolar.blue },
+    { title: "Euro Oficial", data: dolar.official_euro },
+    { title: "Euro Blue", data: dolar.blue_euro }
+  ];
+
   return (
-    <div className="oficial">
-      {dolar.official && (
-        <CardOficial
-            value_buy={dolar.official.value_buy}
-            value_sell={dolar.official.value_sell}
-        />
+    <div className="blue">
+      {dolar && (
+        <div>
+          {currencies.map((currency, index) => (
+  currency.data && (
+    <Card
+      key={index}
+      title={currency.title}
+      value_buy={currency.data.value_buy}
+      value_sell={currency.data.value_sell}
+    />
+  )
+))}
+        </div>
       )}
     </div>
   );

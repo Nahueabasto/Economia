@@ -1,42 +1,61 @@
 .project-card {
   background: #f6f7f5;
-  padding: 1.2rem 1rem;
+  padding: 3rem 4rem;
   border: rgb(187, 184, 184) solid 1px;
-  max-width: 400px;
   border-radius: 10px;
+  /* margin: -90px; */
+  margin-top: 10px;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+ 
+}
+
+.contenedor-card{
+  justify-content: center;
+  /* display: flex; */
+  margin: 0 auto;
+  text-align: center;
   
+ 
 }
 
 h2{
   text-align: center;
-  
 }
+
 
 .dos-component{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 15px;
+  margin-top: 05px;
   grid-gap: 40px;
+  justify-content: center;
+  gap: 40px;
 }
 
 .compra {
   text-align: center; /* Centrar el contenido horizontalmente */
+  margin-top: 5px;
 }
 
 .compra a,
-.compra h2 {
+.compra h4 {
   display: block; /* Cambiar a un elemento de bloque para que ocupen todo el ancho disponible */
-  margin: 0px auto; /* Agregar margen arriba y abajo y centrar horizontalmente */
+  margin: -18px;
+  margin-top: 12px;
 }
 
 .venta{
   text-align: center;
+  margin-top: 5px;
 }
 
 .venta a,
-.venta h2{
+.venta h4{
   display: block; /* Cambiar a un elemento de bloque para que ocupen todo el ancho disponible */
-  margin: 0px auto;
+  margin: -18px;
+  margin-top: 12px;
 }
 
 .project-card img {
@@ -50,10 +69,16 @@ h2{
 
 
 
-@media screen and (max-width: 740px) {
+/* @media screen and (max-width: 740px) {
   .project-container {
-    max-width: 90%;
-    margin: auto;
-    grid-template-columns: 1fr;
+    max-width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 400px; 
+   
   }
-}
+  .blue{
+   justify-content: center;
+  }
+} */
