@@ -75,9 +75,9 @@
 
   
   @media screen and (max-width: 660px) {
-    .footer {
-      margin-top: -80px;
-    }
+    /* .footer {
+      margin-top: 0px;
+    } */
 
     .footer-container {
         grid-template-columns: 1fr;
