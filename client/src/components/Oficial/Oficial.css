@@ -23,7 +23,7 @@
 
     .project-container {
         margin: 0 auto;
-        padding: 10rem 4rem;
+        padding: 10rem 0rem;
         justify-content: center;
       grid-template-columns: 1fr;
       max-width: 10%;
