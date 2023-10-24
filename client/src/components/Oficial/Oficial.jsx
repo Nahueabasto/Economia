@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getDolar } from "../../Redux/Actions";
 import "./Oficial.css";
 
+
 export default function Oficial() {
   const dispatch = useDispatch();
   const dolar = useSelector((state) => state.dolar);
@@ -20,9 +21,9 @@ const currencies = [
   ];
 
   return (
-    <div className="blue">
+    <div className="proje">
       {dolar && (
-        <div>
+        <div className="project-container">
           {currencies.map((currency, index) => (
   currency.data && (
     <Card
