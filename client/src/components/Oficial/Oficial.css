@@ -1,3 +1,9 @@
+.proje{
+    /* max-width: 90%; */
+    justify-content: center;
+    
+}
+
 .project-container{
     padding: 7rem 0rem;
     max-width: 1040px;
@@ -10,6 +16,11 @@
 
 
   @media screen and (max-width: 940px) {
+    .proje{
+        max-width: 90%;
+        
+    }
+
     .project-container {
         padding: 10rem 4rem;
       max-width: 90%;
