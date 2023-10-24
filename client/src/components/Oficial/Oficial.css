@@ -7,7 +7,7 @@
 .project-container{
     padding: 7rem 0rem;
     max-width: 1040px;
-    margin: auto;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
@@ -16,15 +16,16 @@
 
 
   @media screen and (max-width: 940px) {
-    .proje{
-        max-width: 90%;
+    /* .proje{
+         max-width: 10%;
         
-    }
+    } */
 
     .project-container {
+        margin: 0 auto;
         padding: 10rem 4rem;
-      
+        justify-content: center;
       grid-template-columns: 1fr;
-      
+      max-width: 10%;
     }
   }
