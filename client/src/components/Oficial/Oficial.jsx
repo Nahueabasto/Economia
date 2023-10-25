@@ -34,7 +34,7 @@ const currencies = [
     />
   )
 ))}
-        </div>
+      </div>
       )}
     </div>
   );
