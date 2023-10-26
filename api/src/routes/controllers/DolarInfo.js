@@ -1,5 +1,4 @@
 const axios = require("axios");
-//const { Dogs, Temperament } = require("../../db");
 
 
 const getExchangeRates = async () => {

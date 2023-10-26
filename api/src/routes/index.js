@@ -5,11 +5,13 @@ const { Router } = require("express");
 
 const router = Router();
 const getDolar = require("./getDolar");
+const getCripto = require("./getCripto");
 //const bodyParser = require("body-parser");
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 router.use("/", getDolar);
+router.use("/", getCripto);
 
 //app.use(bodyParser.urlencoded)
 

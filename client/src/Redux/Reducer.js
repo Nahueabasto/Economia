@@ -1,7 +1,8 @@
-import { GET_DOLAR } from "./Actions";
+import { GET_DOLAR, GET_CRIPTO } from "./Actions";
 
 const initialState = {
     dolar: [],
+    cripto: [],
 }
 
 function reducer (state = initialState, action) {
@@ -10,7 +11,11 @@ switch (action.type) {
         return{
             ...state,
             dolar: action.payload,
-
+        };
+    case GET_CRIPTO:
+        return{
+            ...state,
+            cripto: action.payload,
         };
 
         default:

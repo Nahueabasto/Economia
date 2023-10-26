@@ -5,7 +5,7 @@ export default function Card({ title, value_buy, value_sell }) {
   return (
     <div className="project-card">
       <div className="contenedor-card">
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <div className="dos-component">
       <div className="compra">
       <h4>compra</h4>

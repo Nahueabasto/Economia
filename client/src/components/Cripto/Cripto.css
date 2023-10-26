@@ -1,0 +1,10 @@
+.projee{
+    /* padding: 8rem 0rem; */
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    display: grid;
+
+    grid-gap: 40px;
+    padding-bottom: 3rem;
+    justify-content: center;
+}

@@ -1,8 +1,7 @@
-
-
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Incio from './pages/Inicio';
 import MercadoBlue from './pages/MercadoBlue';
+import Criptomonedas from './pages/Criptomonedas';
 import axios from 'axios';
 
 function App() {
@@ -17,7 +16,8 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Incio} /> 
-        <Route exact path="/MercadoBlue" component={MercadoBlue} /> 
+        <Route exact path="/MercadoBlue" component={MercadoBlue} />
+        <Route exact path="/Criptomonedas" component={Criptomonedas} />
       </Switch>
     </BrowserRouter>
   );
