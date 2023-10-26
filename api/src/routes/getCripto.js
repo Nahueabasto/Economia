@@ -6,7 +6,7 @@ router.get("/cripto", async (req, res) => {
     try {
       const exchangeData = await getExchangeCripto(); 
         const binanceExchange = exchangeData.binance;
-     
+     console.log(binanceExchange)
         res.json({
             binance: binanceExchange,
           });
