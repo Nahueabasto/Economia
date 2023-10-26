@@ -7,7 +7,7 @@ export default function CardCripto({ ask }) {
     return (
       <div className="project-cardcripto">
         
-          <div className="dos-component">
+          <div className="dos-componente">
           <div className="logo-h1">
             <img
               className="logoeco"
