@@ -10,7 +10,6 @@ export default function Inicio() {
 
   return (
     <div>
-      
     <Navbar />
     <div className="carduca">
     {/* <Blue /> */}

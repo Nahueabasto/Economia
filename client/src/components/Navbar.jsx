@@ -39,9 +39,9 @@ export default function Navbar() {
              <li>
                <Link to="/">Inicio</Link>
              </li>
-             <li>
+             {/* <li>
                <Link to="/MercadoBlue">Mercado blue</Link>
-             </li>
+             </li> */}
               <li>
                <Link to="/Criptomonedas">Criptomonedas</Link>
              </li>

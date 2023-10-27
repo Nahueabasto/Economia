@@ -9,7 +9,9 @@ export default function Inicio() {
 
   return (
   <div>
+    <Navbar />
     <Cripto />
+    <Footer />
   </div>
   );
 }
