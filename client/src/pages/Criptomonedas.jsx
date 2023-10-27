@@ -3,14 +3,16 @@ import React from "react";
 import Cripto from "../components/Cripto/Cripto";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "./Inicio.css"
+import "./Criptomonedas.css"
 
 export default function Inicio() {
 
   return (
   <div>
     <Navbar />
+    <div className="cri">
     <Cripto />
+    </div>
     <Footer />
   </div>
   );

@@ -1,12 +1,11 @@
 .carduca {
-  
     max-width: 600px;
     margin: auto;
     display: grid; /* Asegura que esté configurado como una cuadrícula */
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0px; /* Reducir el espacio entre las tarjetas */
-    padding-bottom: 5rem;
-    margin-top: 10px;
+    padding-bottom: 3rem;
+    margin-top: 5px;
     justify-content: center; /* Centrar el contenido horizontalmente */
   }
   
