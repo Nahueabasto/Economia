@@ -1,25 +1,62 @@
+// const axios = require("axios");
+
+// const getExchangeCripto = async () => {
+//   try {
+//     const response = await axios.get("https://criptoya.com/api/usdt/ars/0.5");
+    
+//       const exchangeCripto = {
+//         binance: {
+//           ask: response.data.binance.ask,
+      
+//         }
+//       };
+
+//       return exchangeCripto;
+//     } catch (err) {
+//         console.error("Error fetching exchange rates:", err);
+//         throw err; // You might want to handle the error more gracefully
+//       }
+//     };
+
+// module.exports = {
+//   getExchangeCripto
+// };
+
 const axios = require("axios");
 
 const getExchangeCripto = async () => {
   try {
-    const response = await axios.get("https://criptoya.com/api/usdt/ars/0.5");
-    // console.log("Full response:", response.data);
-    
+    const [usdtResponse, btcResponse, ethResponse] = await Promise.all([
+      axios.get("https://criptoya.com/api/usdt/ars/0.5"),
+      axios.get("https://criptoya.com/api/btc/usd/0.5"),
+      axios.get("https://criptoya.com/api/eth/usd/0.5"),
+    ]);
 
-      const exchangeCripto = {
+    const exchangeCripto = {
+      usdt: {
         binance: {
-          ask: response.data.binance.ask,
-      
-        }
-      };
-
-      return exchangeCripto;
-    } catch (err) {
-        console.error("Error fetching exchange rates:", err);
-        throw err; // You might want to handle the error more gracefully
-      }
+          ask: usdtResponse.data.binance.ask,
+        },
+      },
+      btc: {
+        calypso: {
+          ask: btcResponse.data.calypso.ask,
+        },
+      },
+      eth: {
+        calypso: {
+          ask: ethResponse.data.calypso.ask,
+        },
+      },
     };
 
+    return exchangeCripto;
+  } catch (err) {
+    console.error("Error fetching exchange rates:", err);
+    throw err;
+  }
+};
+
 module.exports = {
-  getExchangeCripto
+  getExchangeCripto,
 };

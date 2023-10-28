@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { getCripto } from "../../Redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 import CardCripto from "./CardCripto";
+import USDC from "../../img/usdc.png";
+import BITCOIN from "../../img/bitcoin.png";
+import ETH from "../../img/eth.png";
 import "./Cripto.css"
 
 
@@ -15,12 +18,34 @@ export default function Cripto(){
         dispatch(getCripto());
       }, [dispatch]);
 
+      const current = [
+        { title: "USDC", sign: "$", data: cripto.usdt.binance, image: USDC },
+        { title: "Bitcoin", sign: "US$", data: cripto.btc.calypso, image: BITCOIN },
+        { title: "Ethereum", sign: "US$", data: cripto.btc.calypso, image: ETH }
+      ]
+
       return(
-        // <div className="proje">
         <div className="projee">
-        <CardCripto ask={cripto.binance ? cripto.binance.ask : ''} /> 
-        {/* parece que cripto no está completamente definido cuando se renderiza el componente Cripto. Esto podría ocurrir si la acción getCripto asincrónica no ha terminado de cargar los datos antes de que se renderice el componente Cripto. */}
+      {cripto && (
+        <div className="proyecto-container">
+          {current.map((currency, index) => (
+  currency.data && (
+    <CardCripto
+      key={index}
+      title={currency.title}
+      sign={currency.sign}
+      ask={currency.data.ask}
+      image={currency.image}
+      // value_sell={currency.data.value_sell}
+    />
+  )
+))}
       </div>
+      )}
+    </div>
+      //   <div className="projee">
+      //   <CardCripto ask={cripto.binance ? cripto.binance.ask : ''} /> 
       // </div>
+      
       )
 }
