@@ -19,10 +19,12 @@ export default function Cripto(){
       }, [dispatch]);
 
       const current = [
-        { title: "USDC", sign: "$", data: cripto.usdt.binance, image: USDC },
-        { title: "Bitcoin", sign: "US$", data: cripto.btc.calypso, image: BITCOIN },
-        { title: "Ethereum", sign: "US$", data: cripto.btc.calypso, image: ETH }
+        { title: "USDC", sign: "$", data: cripto.usdt, image: USDC },
+        { title: "Bitcoin", sign: "US$", data: cripto.btc, image: BITCOIN },
+        { title: "Ethereum", sign: "US$", data: cripto.eth, image: ETH }
       ]
+
+      console.log(current)
 
       return(
         <div className="projee">
@@ -34,18 +36,15 @@ export default function Cripto(){
       key={index}
       title={currency.title}
       sign={currency.sign}
-      ask={currency.data.ask}
+      // ask={currency.data.binance ? currency.data.binance.ask : currency.data.calypso.ask}
+      ask={currency.title === "USDC" ? currency.data.binance.ask : currency.data.calypso.ask}
       image={currency.image}
-      // value_sell={currency.data.value_sell}
+  
     />
   )
 ))}
       </div>
       )}
     </div>
-      //   <div className="projee">
-      //   <CardCripto ask={cripto.binance ? cripto.binance.ask : ''} /> 
-      // </div>
-      
       )
 }
