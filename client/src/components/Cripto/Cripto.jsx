@@ -19,7 +19,7 @@ export default function Cripto(){
       }, [dispatch]);
 
       const current = [
-        { title: "USDC", sign: "$", data: cripto.usdt, image: USDC },
+        { title: "USDC", sign: "$", data: cripto.usdc, image: USDC },
         { title: "Bitcoin", sign: "US$", data: cripto.btc, image: BITCOIN },
         { title: "Ethereum", sign: "US$", data: cripto.eth, image: ETH }
       ]
@@ -37,7 +37,7 @@ export default function Cripto(){
       title={currency.title}
       sign={currency.sign}
       // ask={currency.data.binance ? currency.data.binance.ask : currency.data.calypso.ask}
-      ask={currency.title === "USDC" ? currency.data.binance.ask : currency.data.calypso.ask}
+      ask={currency.title === "USDC" ? currency.data.buenbit.ask : currency.data.calypso.ask}
       image={currency.image}
   
     />

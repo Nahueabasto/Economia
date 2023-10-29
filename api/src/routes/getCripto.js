@@ -5,12 +5,12 @@ const { getExchangeCripto } = require("./controllers/CriptoInfo");
 router.get("/cripto", async (req, res) => {
   try {
     const exchangeData = await getExchangeCripto();
-    const usdtData = exchangeData.usdt;
+    const usdcData = exchangeData.usdc;
     const btcData = exchangeData.btc;
     const ethData = exchangeData.eth;
 
     res.json({
-      usdt: usdtData,
+      usdc: usdcData,
       btc: btcData,
       eth: ethData,
     });
