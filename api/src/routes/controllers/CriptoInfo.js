@@ -8,6 +8,11 @@ const getExchangeCripto = async () => {
       axios.get("https://criptoya.com/api/eth/usd/0.5"),
     ]);
 
+    // Log the entire response objects
+    console.log("USDT Response:", usdtResponse.data);
+    console.log("BTC Response:", btcResponse.data);
+    console.log("ETH Response:", ethResponse.data);
+
     const exchangeCripto = {
       usdc: {
         buenbit: {
@@ -15,14 +20,14 @@ const getExchangeCripto = async () => {
         },
       },
       btc: {
-        calypso: {
-          ask: btcResponse.data.calypso.ask,
+        decrypto: {
+          ask: btcResponse.data.decrypto.ask,
         },
       },
       eth: {
-        calypso: {
-          ask: ethResponse.data.calypso.ask,
-        },
+        letsbit: {
+          ask: ethResponse.data.letsbit.ask,
+       },
       },
     };
 

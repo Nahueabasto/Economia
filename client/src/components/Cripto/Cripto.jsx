@@ -7,7 +7,6 @@ import BITCOIN from "../../img/bitcoin.png";
 import ETH from "../../img/eth.png";
 import "./Cripto.css"
 
-
 export default function Cripto(){
     const dispatch = useDispatch();
     const cripto = useSelector((state) => state.cripto);
@@ -24,27 +23,39 @@ export default function Cripto(){
         { title: "Ethereum", sign: "US$", data: cripto.eth, image: ETH }
       ]
 
-      console.log(current)
 
-      return(
+      return (
         <div className="projee">
-      {cripto && (
-        <div className="proyecto-container">
-          {current.map((currency, index) => (
-  currency.data && (
-    <CardCripto
-      key={index}
-      title={currency.title}
-      sign={currency.sign}
-      // ask={currency.data.binance ? currency.data.binance.ask : currency.data.calypso.ask}
-      ask={currency.title === "USDC" ? currency.data.buenbit.ask : currency.data.calypso.ask}
-      image={currency.image}
-  
-    />
-  )
-))}
-      </div>
-      )}
-    </div>
-      )
-}
+          {cripto && (
+            <div className="proyecto-container">
+              {current.map((currency, index) => {
+                const buenbitAsk = currency.data?.buenbit?.ask;
+                const decryptoAsk = currency.data?.decrypto?.ask;
+                const letsbitAsk = currency.data?.letsbit?.ask;
+      
+                if (buenbitAsk !== undefined || decryptoAsk !== undefined || letsbitAsk !== undefined) {
+                  return (
+                    <CardCripto
+                      key={index}
+                      title={currency.title}
+                      sign={currency.sign}
+                      // ask={currency.data.binance ? currency.data.binance.ask : currency.data.calypso.ask}
+//ask={currency.title === "USDC" ? currency.data.buenbit.ask : currency.data.calypso.ask}
+                      ask={buenbitAsk || decryptoAsk || letsbitAsk}
+                      image={currency.image}
+                    />
+                  );
+                } else {
+                  console.error(`Ask data not found for currency: ${currency.title}`);
+                  return null; // or any fallback component if needed
+                }
+              })}
+            </div>
+          )}
+        </div>
+      );
+      }
+
+
+
+
