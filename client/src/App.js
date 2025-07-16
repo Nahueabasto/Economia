@@ -10,7 +10,7 @@ function App() {
     axios.defaults.baseURL = 'http://localhost:3001';
   } else {
     axios.defaults.baseURL = 'https://economia-dq5t.vercel.app/';
-  }
+  }//
   
   return (
     <BrowserRouter>
