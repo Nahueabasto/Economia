@@ -1,31 +1,31 @@
 .proje{
-    /* max-width: 90%; */
-    justify-content: center;
-    
+max-width: 1000px; /* Ajusta el ancho máximo de todas las cards */
+ margin: 0; /* centra el contenedor en la página */
 }
 
 .project-container{
-    padding: 8rem 0rem;
-    /* max-width: 1000px; */
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
-    padding-bottom: 0rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards por fila */
+  
+  justify-content: start; /* alineadas a la izquierda */
+  justify-items: start; /* cada card alineada a la izquierda */
+ /* espacio arriba y abajo */
   }
 
 
   @media screen and (max-width: 940px) {
-    /* .proje{
-         max-width: 10%;
-        
-    } */
-
-    .project-container {
-        margin: 0 auto;
-        padding: 10rem -5rem;
-        justify-content: center;
-      grid-template-columns: 1fr;
-      max-width: 10%;
-    }
+  .proje {
+    max-width: 100%; /* deja que el contenedor ocupe todo el ancho disponible */
+    margin: 0 auto;
   }
+
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards por fila */
+    gap: 10px; /* espacio entre cards */
+    justify-content: center; /* centra el grid horizontalmente */
+    justify-items: center; /* centra cada card dentro de su celda */
+    /* espacio superior e inferior */
+    margin: 0 auto; /* centra el contenedor en la página */
+  }
+}

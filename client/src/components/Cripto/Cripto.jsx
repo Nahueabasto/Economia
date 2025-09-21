@@ -19,15 +19,15 @@ export default function Cripto(){
 
       const current = [
         { title: "USDC", sign: "$", data: cripto.usdc, image: USDC },
-        { title: "Bitcoin", sign: "US$", data: cripto.btc, image: BITCOIN },
-        { title: "Ethereum", sign: "US$", data: cripto.eth, image: ETH }
+        // { title: "Bitcoin", sign: "US$", data: cripto.btc, image: BITCOIN },
+        // { title: "Ethereum", sign: "US$", data: cripto.eth, image: ETH }
       ]
 
 
       return (
         <div className="projee">
           {cripto && (
-            <div className="proyecto-container">
+            <div className="project-container">
               {current.map((currency, index) => {
                 const buenbitAsk = currency.data?.buenbit?.ask;
                 const decryptoAsk = currency.data?.decrypto?.ask;

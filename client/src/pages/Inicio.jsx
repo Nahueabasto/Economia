@@ -10,18 +10,21 @@ export default function Inicio() {
 
   return (
     <div>
-    <Navbar />
+  <Navbar />
+  <div className="contenido">
+    <h2>Cotización dólar</h2>
     <div className="carduca">
-    {/* <Blue /> */}
-    <Oficial />
+      {/* <Blue /> */}
+      <Oficial />
     </div>
     <div>
-        <Cripto />
-      </div>
-    <div className="footer">
-    <Footer />
+      <Cripto />
     </div>
   </div>
+  <div className="footer">
+    <Footer />
+  </div>
+</div>
   );
 }
 

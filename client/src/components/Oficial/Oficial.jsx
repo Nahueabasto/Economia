@@ -16,8 +16,8 @@ export default function Oficial() {
 const currencies = [
     { title: "Dólar Oficial", data: dolar.official },
     { title: "Dólar Blue", data: dolar.blue },
-    { title: "Euro Oficial", data: dolar.official_euro },
-    { title: "Euro Blue", data: dolar.blue_euro }
+    // { title: "Euro Oficial", data: dolar.official_euro },
+    // { title: "Euro Blue", data: dolar.blue_euro }
   ];
 
   return (

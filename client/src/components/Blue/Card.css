@@ -1,100 +1,83 @@
 .project-card {
-  background: #404140;
-  width: 250px; /* Tamaño fijo en anchura */
-  height: 200px; /* Tamaño fijo en altura */
-  padding: 2.5rem; /* Puedes mantener el relleno uniforme si lo deseas */
-  /* padding: 3rem 3rem; */
-  border: #404140 solid 1px;
-  border-radius: 10px;
-  /* margin-top: 10px; */
-  justify-content: center;
-  /* grid-template-columns: repeat(2, 1fr); */
- 
+background: #2b2b2b;
+  width: 200px; /* ancho de la card */
+  max-height: 120px;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 33px;
 }
 
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
 
-.contenedor-card{
-  justify-content: center;
-  /* display: flex; */
-  margin: 0 auto;
+.card-title {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
+}
+
+.dos-component {
+  display: flex;
+  justify-content: center; /* centra horizontalmente los bloques dentro de la card */
+  gap: 0.5rem;
+  margin-top: auto; /* empuja los bloques hacia abajo si hay espacio */
+  align-items: center;
   
- 
 }
 
-.dos-component{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  gap: 50px;
-}
-
-h2{
+.compra, .venta {
+  align-items: center;
+  flex: 1;
   text-align: center;
- 
+  background: rgba(255,255,255,0.05);
+  padding: 0.7rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente el contenido */
 }
 
-.compra {
-  text-align: center; /* Centrar el contenido horizontalmente */
-  margin-top: 5px;
+.compra h4, .venta h4 {
+  font-size: 0.8rem;
+  margin-bottom: 0rem;
+  color: #ccc;
+  
 }
 
-.compra a,
-.compra h4 {
-  border: rgb(51, 152, 255) solid 2px;
-  padding: 0rem; /* Establece el relleno uniforme en todos los lados */
-  border-radius: 5px;
-  box-sizing: border-box; /* Hace que el borde esté dentro del tamaño del elemento */
-  display: block; /* Cambiar a un elemento de bloque para que ocupen todo el ancho disponible */
-  margin: -10px;
-  margin-top: 12px;
+.price {
+  font-size: 1rem; /* tamaño del precio, se puede ajustar */
+  font-weight: bold;
+  line-height: 0.5;
 }
 
-.venta{
-  /* border: rgb(187, 184, 184) solid 1px; */
-  /* border-radius: 10px; */
-  text-align: center;
-  margin-top: 5px;
+.price.green {
+  color: #2ecc71;
 }
 
-.venta a,
-.venta h4{
-  border: rgb(51, 152, 255) solid 2px;
-  padding: 0rem; /* Establece el relleno uniforme en todos los lados */
-  border-radius: 5px;
-  box-sizing: border-box; /* Hace que el borde esté dentro del tamaño del elemento */
-  display: block; /* Cambiar a un elemento de bloque para que ocupen todo el ancho disponible */
-  margin: -10px;
-  margin-top: 12px;
+.price.red {
+  color: #e74c3c;
 }
 
-.project-card img {
-  width: 100%;
-}
-
-.project-title {
-  color: rgb(41, 192, 3);
-  padding: 1rem 0;
-}
-
-
-
+/* Responsive: cuando la pantalla es más chica */
 @media screen and (max-width: 940px) {
-  .project-card {
-    width: 300px;
-     height: 250px;
-     background: #404140;
-    padding: 3rem;
-    border: #404140 solid 1px;
-    border-radius: 10px;
-    justify-content: center; 
-   
+  .project-container {
+    grid-template-columns: 1fr; /* 1 card por fila */
+    justify-content: center; /* centra las cards horizontalmente */
+    justify-items: center; /* centra cada card dentro del grid */
    
   }
+
 
   .dos-component {
-    text-align: center; /* Centrar el contenido horizontalmente */
-    margin-top: 20px;
+    justify-content: center; /* centra Compra/Venta horizontalmente */
   }
-  
+
+
 }

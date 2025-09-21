@@ -1,31 +1,12 @@
 .projee{
     /* padding: 8rem 0rem; */
     /* max-width: 1000px; */
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 40px;
+    max-width: 1000px;
+    padding-left: 20px;
     padding-bottom: 3rem;
-    justify-content: center;
+    
     
 }
 
-.proyecto-container{
-    padding: 0rem 0rem;
-    /* max-width: 1000px; */
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
-    padding-bottom: 0rem;
-}
 
-@media screen and (max-width: 950px) {
 
-    .proyecto-container {
-        margin: 0 auto;
-        padding: 10rem -5rem;
-        justify-content: center;
-      grid-template-columns: 1fr;
-      max-width: 10%;
-    }
-  }
