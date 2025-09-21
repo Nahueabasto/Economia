@@ -18,5 +18,6 @@ export default function Card({ title, value_buy, value_sell }) {
     </div>
   );
 }
+//
 
 
