@@ -3,8 +3,8 @@ import { getCripto } from "../../Redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 import CardCripto from "./CardCripto";
 import USDC from "../../img/usdc.png";
-import BITCOIN from "../../img/bitcoin.png";
-import ETH from "../../img/eth.png";
+// // import BITCOIN from "../../img/bitcoin.png";
+// import ETH from "../../img/eth.png";
 import "./Cripto.css"
 
 export default function Cripto(){

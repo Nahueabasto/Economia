@@ -1,11 +1,11 @@
 import React from "react";
 
 //Icons
-import InstagramIcon from "@mui/icons-material/Instagram";
-import PhoneIcon from "@mui/icons-material/Phone";
-import EmailIcon from "@mui/icons-material/Email";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import StorefrontIcon from "@mui/icons-material/Storefront";
+// import InstagramIcon from "@mui/icons-material/Instagram";
+// import PhoneIcon from "@mui/icons-material/Phone";
+// import EmailIcon from "@mui/icons-material/Email";
+// import LocationOnIcon from "@mui/icons-material/LocationOn";
+// import StorefrontIcon from "@mui/icons-material/Storefront";
 
 import "./Footer.css"
 
